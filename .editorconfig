@@ -1,0 +1,56 @@
+# このファイルが設定のルートであることを明示（上位ディレクトリからの継承を防ぐ）
+root = true
+
+# ========================================
+# 共通設定（すべてのファイルに適用）
+# ========================================
+[*]
+# インデントはスペースを使用（タブは使わない）
+indent_style = space
+
+# インデント幅は 4（コーディングスタイルに準拠）
+indent_size = 4
+
+# 改行コードは CRLF（Windows 標準）
+end_of_line = crlf
+
+# 文字コードは UTF-8 BOM（Visual Studio のデフォルト）
+charset = utf-8-bom
+
+# 行末の余分なスペースは削除
+trim_trailing_whitespace = true
+
+# ファイル末尾には必ず改行を入れる
+insert_final_newline = true
+
+# ========================================
+# C++ ソース・ヘッダファイル向けの追加設定
+# ========================================
+[*.{cpp,h,hpp,cxx,hxx}]
+# Visual Studio 2022 以降で一部の C++ 整形に対応している拡張設定
+# ※中括弧の改行位置などは制御できないが、インデントや構造補助に有効
+
+# 中括弧のインデントを有効に
+c_cpp_indent_braces = true
+
+# case ラベルの中身もインデント
+c_cpp_indent_case_contents = true
+
+# case ラベル自体もインデント
+c_cpp_indent_case_labels = true
+
+# namespace 内のコードもインデント
+c_cpp_indent_namespace_contents = true
+
+# プリプロセッサは左端に固定
+c_cpp_indent_preprocessor = false
+
+# ========================================
+# マニフェストファイル（例：Windowsアプリ用）向けの設定
+# ========================================
+[*.manifest]
+# マニフェストは UTF-8 BOM（Visual Studio の既定）
+charset = utf-8-bom
+
+# インデント幅は 2（XML風の構造に合わせてコンパクトに）
+indent_size = 2
