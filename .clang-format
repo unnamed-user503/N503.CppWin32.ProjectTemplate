@@ -1,0 +1,72 @@
+# clang-format version 22.1.1 
+Language: Cpp
+BasedOnStyle: Microsoft
+
+# 基本インデント設定
+IndentWidth: 4
+ColumnLimit: 1200
+
+# 空行を最小限に抑える
+MaxEmptyLinesToKeep: 1
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+# オールマンスタイル (BraceWrapping)
+BreakBeforeBraces: Allman
+BraceWrapping:
+  AfterCaseLabel: true
+  AfterClass: true
+  AfterControlStatement: Always
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterObjCDeclaration: true
+  AfterStruct: true
+  AfterUnion: true
+  BeforeCatch: true
+  BeforeElse: true
+  BeforeLambdaBody: true
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+
+# 空の定義などで {} をまとめない設定
+AllowShortBlocksOnASingleLine: Never
+AllowShortFunctionsOnASingleLine: None
+AllowShortLambdasOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+
+# カンマを後ろにする (標準的な配置)
+BinPackArguments: false
+BinPackParameters: false
+
+# West Const (const を型の左側に配置)
+QualifierAlignment: Left
+
+# コンストラクタの初期化子を常に改行して縦に並べる
+BreakConstructorInitializers: BeforeComma
+ConstructorInitializerIndentWidth: 4
+
+# 波括弧内の余白設定 { foo }
+Cpp11BracedListStyle: false
+
+# 名前空間内をインデントする
+NamespaceIndentation: All
+
+# 名前空間の閉じコメント
+FixNamespaceComments: true
+
+# コメントの位置を揃える
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 1
+
+# アクセス修飾子のインデント
+AccessModifierOffset: -4
+
+# その他のMicrosoft準拠および詳細調整
+PointerAlignment: Left
+ReferenceAlignment: Left
+Standard: Latest
+UseTab: Never
